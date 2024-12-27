@@ -1,0 +1,42 @@
+body {
+  box-sizing: border-box;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-spin {
+  animation: spin 1s linear infinite;
+}
+
+.custom-scrollbar {
+  scrollbar-width: none;
+}
+
+.custom-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.custom-scrollbar {
+  overflow-y: auto;
+  -ms-overflow-style: none;
+}
+
+div::-webkit-scrollbar {
+  width: 8px;
+}
+
+div::-webkit-scrollbar-thumb {
+  background-color: #888;
+  border-radius: 10px;
+}
+
+div::-webkit-scrollbar {
+  display: none;
+}
