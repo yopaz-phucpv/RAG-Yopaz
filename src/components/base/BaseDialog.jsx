@@ -201,7 +201,7 @@ function BaseDialog() {
         setIsTypingFinished(false);
       }
       if (value?.end) {
-        typingQueue.current += "";
+        setIsTypingFinished(true)
       }
     }
     function onError(value) {

@@ -60,6 +60,7 @@ export function TemplateProvider ({ children }) {
   }, [isLoadingBot, botList, currentBot]);
 
   const handleSubmit = (id) => {
+
     if (id) {
       setIsNewCreate(false);
       sendQuestion({
@@ -85,6 +86,7 @@ export function TemplateProvider ({ children }) {
 
   useEffect(() => {
     if (isSuccessCreating) {
+     
       navigate(MAIN_PATHS.ChatDetail.replace(":id", newThread.id));
       sendQuestion({
         botID: currentBot,

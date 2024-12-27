@@ -76,9 +76,10 @@ const BaseTextArea = ({ width = "w-full" }) => {
           if (e.key === "Enter" && !e.shiftKey && !e.ctrlKey) {
             setIsSubmitting(true);
             e.preventDefault();
+            handleSubmit(id);
             setTimeout(() => {
               setIsSubmitting(false);
-            }, 500);
+            }, 1000);
           } else if (e.shiftKey && e.ctrlKey) {
             e.preventDefault();
             setQuestion((prev) => prev + "\n");

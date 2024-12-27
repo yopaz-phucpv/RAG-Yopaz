@@ -12,8 +12,7 @@ export function useHandleThread(
 ) {
   const dispatch = useDispatch();
   return useMutation({
-    mutationFn: ({ botID, userID, threadID, question, image }) =>
-      handleThread(botID, userID, threadID, question, image),
+    mutationFn: ({ botID, userID, threadID, question, image }) =>  handleThread(botID, userID, threadID, question, image),
     onError: (error, variables, context) => {
       if(error.data.error = 'Not enough token') {
         dispatch(addError({status: error.status, message: 'Bạn không có đủ token'}))

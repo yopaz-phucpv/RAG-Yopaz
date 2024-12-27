@@ -2,7 +2,7 @@ import axiosInstance from "../axiosInstance";
 import { API_ROUTES } from "../common/routes";
 
 
-export const handleThread = async (
+export const handleThread = async ( botID, userID, threadID, question, image
 ) => {
   const formData = new FormData();
   formData.append("bot_id", botID.toString());
@@ -13,7 +13,6 @@ export const handleThread = async (
   if (image) {
     formData.append("image", image);
   }
-
   const response = await axiosInstance.post(
     API_ROUTES.Handle.getAnswer,
     formData,
